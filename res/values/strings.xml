@@ -98,4 +98,6 @@
      
      <string name="txt_event_coin_ment1">"이벤트 지급코인 : $"</string>
      <string name="txt_event_coin_ment2">"이벤트 코인이 지급되었습니다 앞으로도 많은이용 부탁드립니다"</string>
+     
+     <string name="txt_finish">"'뒤로'버튼을 한번 더  누르시면  종료됩니다."</string>
 </resources>

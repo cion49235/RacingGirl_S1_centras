@@ -379,6 +379,7 @@ public final class R {
         public static final int txt_favorite_activity3=0x7f060021;
         public static final int txt_favorite_activity4=0x7f060022;
         public static final int txt_favorite_activity5=0x7f06002e;
+        public static final int txt_finish=0x7f060055;
         public static final int txt_finish_ment=0x7f060005;
         public static final int txt_finish_no=0x7f060004;
         public static final int txt_finish_yes=0x7f060003;

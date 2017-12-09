@@ -960,15 +960,26 @@ public class MainActivity extends Activity implements OnItemClickListener, OnCli
 	
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if(keyCode == KeyEvent.KEYCODE_BACK){
-//			Toast.makeText(context, context.getString(R.string.txt_main_activity6) , Toast.LENGTH_SHORT).show();
-			addInterstitialView();
-			return true;
-		}
+		 if(keyCode == KeyEvent.KEYCODE_BACK){
+			 if(!flag){
+				 Toast.makeText(context, context.getString(R.string.txt_finish) , Toast.LENGTH_LONG).show();
+				 flag = true;
+				 handler.sendEmptyMessageDelayed(0, 2000);
+				 return false;
+			 }else{
+				 handler.postDelayed(new Runnable() {
+					 @Override
+					 public void run() {
+						 PreferenceUtil.setBooleanSharedData(context, PreferenceUtil.PREF_AD_VIEW, true);
+						 finish();
+					 }
+				 },0);
+			 }
+			 return false;	 
+		 }
 		return super.onKeyDown(keyCode, event);
 	}
 	
-	//** BannerAd 占싱븝옙트占쏙옙 *************
 	@Override
 	public void onClickedAd(String arg0, com.admixer.AdView arg1) {
 	}
